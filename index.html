@@ -12,17 +12,37 @@
 </head>
 
 <body>
+  <h1>This site can’t be reached</h1>
+  <p>Try:</p>
+  <ul>
+    <li>Checking the connection</li>
+    <li>Checking the proxy and the firewall</li>
+  </ul>
   <br>
-  <br>
+  <p id="subtitle">ERR_CONNECTION_REFUSED</p>
   <br><br>
-  <br>
-  <br><br>
-  <br>
-  <br><br>
-  <br>
-  <br>
-  <script src="sketch.js"></script>
   
+  <button id="button" onclick="myFunction()">Try Again</button> 
+  <p><span id="dots"></span><span id="more">this site is not ready yet!</span></p>
+
 </body>
+
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("button");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Try Again"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Try Again"; 
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
 
 </html>

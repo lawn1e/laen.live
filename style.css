@@ -3,12 +3,13 @@
 }
 
 body{
- 
+  margin-left: 30%;
+  margin-top: 20%;
   background-color: #fadee3;
-  text-align: center;
-  color: white;
+  text-align: left;
+  color: #d9046b;
   font-family: 'Archivo', sans-serif;
-  font-size: 15px;
+
 }
 
 canvas {
@@ -21,3 +22,35 @@ canvas {
   width: 100%;
   }
 }
+
+h1 {
+ font-size: 30px;
+}
+
+p {
+  font-size: 15px;
+}
+
+#subtitle {
+  font-size: 10px;
+}
+
+#button {
+  background-color: #fef0f7; /* Green */
+  border: none;
+  color: #d9046b;
+  padding: 8px 30px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+#button:hover {
+  border: solid;
+  border-color: #d9046b;
+  border-width: 1px;
+}
+
+#more {display: none;}
