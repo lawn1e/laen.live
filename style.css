@@ -3,13 +3,16 @@
 }
 
 body{
-  margin-left: 30%;
-  margin-top: 20%;
-  background-color: #fadee3;
+  margin-left: 15%;
+  margin-top: 10%;
+  background-color: #fcf4c9;
   text-align: left;
-  color: #d9046b;
+  color: #3f1529;
   font-family: 'Archivo', sans-serif;
+}
 
+h1 {
+  margin: 10px;
 }
 
 canvas {
@@ -36,9 +39,9 @@ p {
 }
 
 #button {
-  background-color: #fef0f7; /* Green */
+  background-color: #ffffff;
   border: none;
-  color: #d9046b;
+  color: #3f1529;
   padding: 8px 30px;
   border-radius: 5px;
   text-align: center;
@@ -49,8 +52,33 @@ p {
 
 #button:hover {
   border: solid;
-  border-color: #d9046b;
+  border-color: #3f1529;
   border-width: 1px;
 }
 
 #more {display: none;}
+
+#div1, #div2 {
+  text-align: center;
+  float: left;
+  width: 225px;
+  height: 450px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+#div3 {
+  width: 600px;
+  height: 170px;
+  margin: 10px;
+  border: none;
+}
+
+#div4 {
+  width: 600px;
+  height: 35px;
+  margin: 10px;
+  float: left;
+  border: none;
+}
