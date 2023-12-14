@@ -1,20 +1,103 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Forest of Links</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Forest of Links</title>
+    <link rel="icon" type="image/x-icon" href="tree.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="Forest of Links">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
 <body>
- <h1>coming soon!</h1>
+  <body onload="myFunction()" style="margin:0;">
 
-</body>
+  <div id="loader">
+    <img src="tree.gif">
+  </div>
 
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+    <!-- <model-viewer> HTML element -->
+      <model-viewer src="woods.glb" ar ar-modes="webxr scene-viewer quick-look" 
+      camera-controls interaction-prompt="none" shadow-intensity="0" tone-mapping="commerce" 
+      exposure="1" camera-orbit="38.96deg 78.82deg 159.1m" field-of-view="12deg" 
+      min-field-of-view='2deg' max-field-of-view='12deg' min-camera-orbit="auto 49deg auto" 
+      max-camera-orbit="auto 103deg auto" shadow-softness="0.12">
+       
+      <button class="Hotspot" slot="hotspot-4" data-position="10.331244519578098m 15.557794402772455m -6.458964203267557m" data-normal="-0.5464504254735272m 0.41646167067689055m 0.7266027865049889m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a  href="#default" onclick="openWin()">o</a></div>
+    </button><button class="Hotspot" slot="hotspot-6" data-position="-15.161355005019034m 7.95928624482538m 28.407062202453886m" data-normal="0.9395516854428207m -0.33382476240695724m 0.07618174574984181m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a  href="#default" onclick="openWin2()">o</a></div>
+    </button><button class="Hotspot" slot="hotspot-15" data-position="-36.43251678552916m 4.259496580385221m -22.204797582245476m" data-normal="-0.2018715121801423m 0.9757495979348045m 0.08462041538641958m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a  href="#default" onclick="openWin3()">o</a></div>
+    </button><button class="Hotspot" slot="hotspot-16" data-position="-60.081168099558624m 2.4318568978658908m 22.621761208675178m" data-normal="-0.9780687677890708m -0.006683569095945064m 0.20817496338346905m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a  href="#default" onclick="openWin4()">o</a></div>
+    </button><button class="Hotspot" slot="hotspot-17" data-position="39.81061887080927m -2.0968372357206935m -10.064897027692153m" data-normal="0.8970780814715352m -0.4359789836351175m -0.07192524989070062m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a  href="#default" onclick="openWin5()">o</a></div>
+    </button><button class="Hotspot" slot="hotspot-19" data-position="40.96426457907239m 7.794256627052585m 30.99805277368502m" data-normal="-0.7452712498544091m -0.029447241279874956m -0.6661108197000346m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a  href="#default" onclick="openWin6()">o</a></div>
+    </button><button class="Hotspot" slot="hotspot-22" data-position="-18.930023639476033m -2.83197355019729m -6.3507150540111414m" data-normal="-0.02049312065543354m -0.999411515990672m 0.027507339221168634m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="labels"><a href="#default" onclick="openWin7()">o</a></div>
+    </button>
+</model-viewer>
 
+      <!-- Loads <model-viewer> for browsers: -->
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+   
+    <div class="header">
+      <a href="#default">Forest</a>
+    </div>
+      
+    <div class="header2">
+      <a href="about.html">About</a>
+    </div>
+      
+    <div class="footer">
+      Let's explore the forest!
+    </div>
+  </div>
 
+    <script>
+      var myVar;
+      function myFunction() {
+        myVar = setTimeout(showPage, 2000);
+      }
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "inline";
+      }
+      </script>
+
+    <script>
+       function openWin() {
+        window.open("liveforest.html","_blank","screenX=80, screenY=100, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=590, height=450");
+      }
+
+      function openWin2() {
+        window.open("treewalk.html","_blank","screenX=700, screenY=1000, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=630, height=500");
+      }
+
+      function openWin3() {
+        window.open("forestbuzz.html","_blank","screenX=10, screenY=700, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=500, height=570");
+      }
+
+      function openWin4() {
+        window.open("Buildyourown.html","_blank","screenX=450, screenY=50, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=560, height=600");
+      }
+
+      function openWin5() {
+        window.open("deadoralive.html","_blank","screenX=1200, screenY=600, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=740, height=600");
+      }
+
+      function openWin6() {
+        window.open("treekipedia/treekipedia.html", "_blank","screenX=2000, screenY=100, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=700, height=650");
+      }
+
+      function openWin7() {
+        window.open("eForest.html","_blank","screenX=900, screenY=20, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=570, height=550");
+      }
+      </script>
+  </body>
 </html>
