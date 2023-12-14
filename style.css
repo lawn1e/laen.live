@@ -1,84 +1,170 @@
-* {
-  box-sizing: border-box;
+* {box-sizing: border-box;}
+
+:not(:defined) > * {
+  display: none;
 }
 
-body{
-  margin-left: 15%;
-  margin-top: 10%;
-  background-color: #d3eaa5;
-  text-align: left;
-  color: #3f1529;
-  font-family: 'Archivo', sans-serif;
+html {
+  height: 100%;
 }
 
-h1 {
-  margin: 10px;
-}
-
-canvas {
-      position: static;
-      z-index: -1;
-    }
-
-@media screen and (max-width:600px) {
-  .column {
+body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  }
+  height: 100%;
+  font-family: 'Space Mono', monospace;
+  background-color: rgb(234, 228, 222);
 }
 
-h1 {
- font-size: 30px;
+model-viewer {
+  width: 100%;
+  height: 100%;
+  background-color: none;
 }
 
-p {
-  font-size: 15px;
+.header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  padding: 40px 40px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-#subtitle {
-  font-size: 10px;
+.header2 {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  text-align: right;
+  padding-top: 40px;
+  padding-right: 40px;
 }
 
-#button {
-  background-color: #ffffff;
-  border: none;
-  color: #3f1529;
-  padding: 8px 30px;
-  border-radius: 5px;
-  text-align: center;
+a:link{
   text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
+  color:black;
 }
 
-#button:hover {
-  border: solid;
-  border-color: #3f1529;
-  border-width: 1px;
+a:visited {
+  text-decoration: none;
+  color:black;
 }
 
-#more {display: none;}
+a:hover {
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
 
-#div1, #div2 {
+a:active {
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
-  float: left;
-  width: 225px;
-  height: 450px;
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid black;
+  padding-bottom: 40px;
+  font-style: italic;
 }
 
-#div3 {
-  width: 600px;
-  height: 170px;
-  margin: 10px;
-  border: none;
+#loader {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
 }
 
-#div4 {
-  width: 600px;
-  height: 35px;
-  margin: 10px;
-  float: left;
+#myDiv {
+  display: none;
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+.Hotspot {
+  background: #ffffff00;
+  border-radius: 32px;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 20px;
+  padding: 8px;
+  position: relative;
+  transition: opacity 0.3s;
+  width: 20px;
+}
+
+.Hotspot:not([data-visible]) {
+  background: transparent;
   border: none;
+  box-shadow: none;
+  height: 32px;
+  pointer-events: none;
+  width: 32px;
+}
+
+.Hotspot:focus {
+  border: 4px solid rgba(0, 127, 200, 0);
+  height: 32px;
+  outline: none;
+  width: 32px;
+}
+
+.Hotspot > * {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.HotspotAnnotation{ 
+  background: #ffffff7a;
+  font-family: 'Space Mono', monospace;
+  border-radius: 32px;
+  display: block;
+  font-size: 18px;
+  left: calc(30% - 1em);
+  max-width: 128px;
+  overflow-wrap: break-word;
+  padding: 0em 0.5em;
+  position: absolute;
+  top: 50%;
+  width: max-content;
+  opacity: 10;
+}
+
+.Hotspot:not([data-visible]) > * {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-50% + 4px));
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#labels a:link{
+  color:rgba(0, 0, 0, 0);
 }
