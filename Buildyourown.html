@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Your Own Forest</title>
+    <meta charset="utf-8">
+    <meta name="description" content="eForest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Zen+Dots&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  background-color: #03460c;
+  color: rgb(203, 224, 208);
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+.row {
+   margin: 0 -5px;
+   padding-bottom: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 400px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(203, 224, 208);
+  color: black;
+  border-radius: 40px;
+  position: relative;
+}
+
+img {
+  padding-bottom: 10px;
+  max-height: 100px;
+}
+
+button {
+  font-family: 'Space Mono', monospace;
+  font-size: 17px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color:  rgb(203, 224, 208);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  color: rgb(13, 149, 45);
+  font-size: 18px;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #d45953;
+  color: rgb(203, 224, 208);
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 48%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+.ribbon {
+  width: 60px;
+  font-size: 17px;
+  padding: 4px;
+  position: absolute;
+  right: -5px;
+  top: -2px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(30deg);
+  background-color: #d45959;
+  color: white;
+}
+</style>
+</head>
+<body>
+<br><br>
+<h2>Build your own forest at home!</h2>
+<p>With a few small purchases, <br>you can have your own forest.</p>
+<br><br><br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2017/02/21/14/40/redwood-2086208_1280.png"><br>
+      <button onclick="myFunction()">Tree A</button>
+      <p>$199</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2020/03/31/13/09/trees-4987565_1280.png"><br>
+      <button onclick="myFunction()">Tree B</button>
+      <p>$120</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://png.pngtree.com/png-clipart/20220923/original/pngtree-jungle-tree-front-view-png-image_8628885.png"><br>
+      <button onclick="myFunction()">Tree C</button>
+      <p><s>$160</s> $2.50</p>
+      <span class="ribbon">SALE</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://png.pngtree.com/png-clipart/20220228/original/pngtree-pine-tree-forest-cutout-png-image_7325551.png"><br>
+      <button onclick="myFunction()">Starter Forest</button>
+      <p>$65,000</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2022/10/27/20/10/palm-trees-7551694_1280.png"><br>
+      <button onclick="myFunction()">2 Palm Trees</button>
+      <p>$480</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://pngimg.com/d/acorn_PNG37020.png"><br>
+      <button onclick="myFunction()">3 Cool Acorns</button>
+      <p>$60</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://png.pngtree.com/png-clipart/20230814/original/pngtree-d-round-soil-ground-section-with-earth-land-and-realistic-green-png-image_10354604.png"><br>
+      <button onclick="myFunction()">1 Acre of Land</button>
+      <p>$3K - $10K</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://png.pngtree.com/png-clipart/20230930/original/pngtree-realistic-cumulus-cloud-png-image_13022536.png"><br>
+      <button onclick="myFunction()">1 Cloud <br>(for rain)</button>
+      <p>$5080</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2020/09/17/22/52/website-5580513_1280.png"><br>
+      <button onclick="myFunction()">This Website</button>
+      <p>$35/year</p>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<hr style="color: rgb(203, 224, 208);">
+<p style="color: rgb(203, 224, 208);">
+  All rights reserved.
+  <br>
+  © ForestMerch.com
+</p>
+<br>
+<div id="snackbar">Thank you for your purchase!</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+</body>
+</html>

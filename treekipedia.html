@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Treekipedia</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Treekipedia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Reenie+Beanie&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-image: url('https://cdn.pixabay.com/photo/2016/10/17/18/40/green-1748361_960_720.jpg');
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+}
+
+.header {
+  padding: 20px;
+  font-size: 90px;
+  text-align: center;
+  background-color: rgb(211, 234, 165);
+  font-family: 'Reenie Beanie', cursive;
+  mix-blend-mode: screen;
+}
+
+.header a:hover {
+  font-size: 91px;
+  color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: green;
+    font-size: 15.5px;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 70%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding-right: 20px;
+}
+
+.img {
+  background-color: none;
+  padding: 0px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+   background-color: rgb(211, 234, 165);
+   padding: 20px;
+   margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 500px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="treekipedia.html">Treekipedia</a>
+</div>
+
+<div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>About Treekipedia</h3>
+      <div class="img" style="height:100px;"><img src="https://web.archive.org/web/20090829084405/http://geocities.com/themysticwave/ntree.gif"></div>
+      <p>We speak for the trees, write articles about trees, and love trees more than you!</p>
+    </div>
+    <div class="card">
+      <h3>Popular Posts</h3>
+      <div class="img"><a href="article1.html">#1<br>Can humans live without trees?</a></div><br>
+      <div class="img"><a href="article2.html">#2<br>My take on trees tbh</a></div><br>
+      <div class="img"><a href="article3.html">#3<br>Trees and Me:<br>A Heartfelt Tale</a></div>
+    </div>
+    <div class="card">
+      <h3>Follow Us</h3>
+      <p>@treekipedia<br>@treekipediamemes</p>
+    </div>
+  </div>
+  <div class="leftcolumn">
+    <div class="card">
+      <a href="article1.html"><h2>Can humans live without trees?</h2></a>
+      <h5>What researchers have to say . . .</h5>
+      <div class="img" ><img class="responsive" src="https://cdn.pixabay.com/photo/2021/09/15/16/32/lapland-6627331_960_720.jpg"></div>
+      <p>Probably not! Studies have shown that many people love trees too much to live without them.</p>
+      <a href="article1.html"><p style="font-size: 13px; font-style: italic;">Read More</p></a>
+    </div>
+    <div class="card">
+        <a href="article2.html"><h2>My take on trees tbh</h2></a>
+      <h5>Let's find out what HumanTreeEnjoyer2017 has to say!</h5>
+      <div class="img" ><img class="responsive" src="https://cdn.pixabay.com/photo/2016/02/21/18/26/winter-1214097_960_720.jpg"></div>
+      <p>Hey guys just popping in to say I like trees a LOT . . . </p>
+      <a href="article2.html"><p style="font-size: 13px; font-style: italic;">Read More</p></a>
+    </div>
+    <div class="card">
+        <a href="article3.html"><h2>Trees and Me: A Heartfelt Tale</h2></a>
+      <h5>By TreeEnthusiast3000x</h5>
+      <div class="img" ><img class="responsive" src="https://cdn.pixabay.com/photo/2020/10/01/11/07/hands-5618240_1280.jpg"></div>
+      <p>A story of how trees saved me . . .</p>
+      <a href="article3.html"><p style="font-size: 13px; font-style: italic;">Read More</p></a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

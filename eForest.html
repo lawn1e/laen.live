@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eForest</title>
+    <meta charset="utf-8">
+    <meta name="description" content="eForest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Zen+Dots&display=swap');
+body {
+   background-color: #2d5952;
+   font-family: 'Zen Dots';
+   color: white;
+}
+
+.login {
+  text-align: center;
+}
+
+input[type=text] {
+  font-family: 'Zen Dots';
+  color: #2d5952;
+  font-size: 17px;
+  background-color: white;
+  border: solid 4px #8cd6b9;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  font-family: 'Zen Dots';
+  color: #2d5952;
+  font-size: 17px;
+  background-color: white;
+  border: solid 4px #8cd6b9;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+img {
+  background-color: none;
+  padding: 0px;
+}
+
+.responsive {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  margin-top: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+button {
+  font-family: 'Zen Dots';
+  color: white;
+  font-size: 17px;
+  padding: 8px 20px;
+  background-color: #8cd6b9;
+  border: solid 4px white;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #7ec1a6;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="title">
+  <img class="responsive" src="eForest.png">
+</div>
+
+<div class="login">
+  <form action="/action_page.php">
+    <label for="username">username</label><br>
+    <input type="text" id="username" name="username" value="tr33bo1"><br><br>
+    <label for="pwd">password</label><br>
+    <input type="password" id="pwd" name="pwd" value="********"><br><br><br>
+  </form>
+  <button onclick="window.location.href='eForestmail.html';">
+        log in
+  </button>
+</div>
+
+</body>
+</html>

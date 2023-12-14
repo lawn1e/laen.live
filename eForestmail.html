@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eForestMail</title>
+    <meta charset="utf-8">
+    <meta name="description" content="eForestmail">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Zen+Dots&display=swap');
+* {box-sizing: border-box}
+
+body {
+   background-color: #2d5952;
+   font-family: 'Zen Dots';
+   color: white;
+   padding: 20px;
+}
+
+.tab {
+  float: left;
+  border: solid 4px #7ec1a6;
+  border-radius: 4px;
+  background-color: #7ec1a6;
+  width: 30%;
+  height: 450px;
+}
+
+.tab button {
+  font-family: 'Zen Dots';
+  display: block;
+  background-color: inherit;
+  border-radius: 4px;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: white;
+}
+
+.tab button.active {
+  background-color: white;
+}
+
+.tabcontent {
+  font-size: 15px;
+  float: left;
+  padding: 0px 12px;
+  border: solid 4px #7ec1a6;
+  border-radius: 4px;
+  width: 70%;
+  overflow: auto;
+  height: 450px;
+  scrollbar-color: #7ec1a6 #2d5952;
+}
+
+.tabicon {
+  text-align: center;
+  float: left;
+  padding-top: 10px;
+  width: 30%;
+  height: 50px;
+}
+
+.tabinbox {
+  text-align: center;
+  font-size: 20px;
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  height: 50px;
+}
+
+.responsive {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="tabicon">
+  <img class="responsive" src="eForest.png">
+</div>
+
+<div class="tabinbox">
+  <p>Inbox</p>
+</div>
+
+<br><br><br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, '1')" id="defaultOpen">New Position</button>
+  <button class="tablinks" onclick="openCity(event, '2')">Invitation</button>
+  <button class="tablinks" onclick="openCity(event, '3')">You win!</button>
+</div>
+
+
+<div id="1" class="tabcontent">
+  <h3>New Position Has Been Assigned To You</h3>
+  <p>From: Tree Mangement Service Ltd.<br><br><br>
+    Hi there Tr33bo1,
+    <br><br>
+    I’m emailing you today to let you know we have created a new position in our Tree Management System.
+    <br><br>
+    In this position, you’ll manage the trees just like you did before, but for less pay.
+    Your hours and benefits will remain the same as we see fit.
+    
+    If you know anybody else who’ll find this position useful, please forward the email to them.
+    <br><br>
+    Let us know if you face any problems accessing the Tree Management Portal by contacting jakeTMS@EFOREST.com. We’ll get back to you ASAP and ensure you gain access to it immediately.
+    <br><br>
+    This is an automated email. Please do not reply.<br><br><br><br><br><br><br><br>
+  </p>
+</div>
+
+<div id="2" class="tabcontent">
+  <h3>We cordially invite you to TREECON</h3>
+  <p>From: TreeCon L.A.<br><br><br>
+    Dear Tr33bo1,
+    <br><br>
+    It is that time of the year again when we have our TREECON.
+    
+    It is a day where we celebrate trees and tree lovers.
+    
+    You have become a valued part of our community, we would love it if you’re able to come, but we understand if you can’t.
+    
+    Please RSVP as soon as possible.
+    <br><br>
+    Thank you,<br>
+    TREECON Organizers<br><br><br>
+    <br></p> 
+</div>
+
+<div id="3" class="tabcontent">
+  <h3>You win!</h3>
+  <p>From: atcvrg@f1hfebch.net<br><br><br>
+    Dear User,
+    <br><br>
+    You have won the grand prize of 1000 TreeCoins! 
+    To claim your coins, please dail this number [8922365347284].
+    <br><br>
+    Make sure to claim your coins before the day is up, or risk losing it all!
+    <br><br><br><br><br><br><br><br><br><br><br>
+    *This email was also sent to 2364 other users.
+  </p>
+</div>
+
+<script>
+function openCity(evt, emailName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(emailName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
